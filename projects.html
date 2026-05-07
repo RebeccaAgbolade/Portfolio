@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Rebecca Agbolade</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.projects-wrapper { margin-top:60px; display:flex; flex-direction:column; gap:80px; }
+.project-card { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.project-card.reverse { direction:rtl; }
+.project-card.reverse > * { direction:ltr; }
+.project-visual { position:relative; overflow:hidden; }
+.project-chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; aspect-ratio:16/10; }
+.chart-placeholder { background:var(--forest-light); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:28px; transition:all 0.3s; }
+.chart-placeholder:hover { border-color:rgba(232,213,163,0.3); }
+.project-number { font-family:'Cormorant Garamond',serif; font-size:80px; font-weight:700; color:rgba(232,213,163,0.07); line-height:1; margin-bottom:-20px; }
+.project-tag { display:inline-block; font-size:12px; color:var(--champagne); letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
+.project-title { font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:600; color:var(--white); line-height:1.2; margin-bottom:20px; }
+.project-desc { font-size:15px; line-height:1.8; color:var(--text-muted); margin-bottom:24px; }
+.findings { margin-bottom:28px; }
+.findings h5 { font-size:13px; color:var(--champagne); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; }
+.finding { display:flex; gap:12px; align-items:flex-start; margin-bottom:8px; font-size:14px; color:var(--text-muted); }
+.finding::before { content:'▸'; color:var(--champagne); flex-shrink:0; margin-top:1px; }
+.tech-stack { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
+.tech-tag { padding:5px 14px; background:rgba(232,213,163,0.07); border:1px solid rgba(232,213,163,0.2); color:var(--champagne-light); font-size:12px; font-weight:500; letter-spacing:0.5px; }
+.project-links { display:flex; gap:16px; flex-wrap:wrap; }
+.project-link { padding:10px 24px; font-size:13px; font-weight:500; letter-spacing:0.5px; text-decoration:none; text-transform:uppercase; transition:all 0.3s; display:flex; align-items:center; gap:8px; }
+.project-link.primary { background:var(--champagne); color:var(--forest); }
+.project-link.primary:hover { background:var(--champagne-light); transform:translateY(-2px); }
+.project-link.secondary { border:1px solid rgba(232,213,163,0.3); color:var(--champagne); }
+.project-link.secondary:hover { background:rgba(232,213,163,0.08); transform:translateY(-2px); }
+
+@media(max-width:900px){
+  .project-card { grid-template-columns:1fr; gap:40px; }
+  .project-card.reverse { direction:ltr; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">RA</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-content">
+<section>
+  <p class="section-label fade-in">My Work</p>
+  <h2 class="section-title fade-in">Featured<br>Projects</h2>
+
+  <div class="projects-wrapper">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card fade-in">
+      <div class="project-visual">
+        <div class="project-chart-grid">
+          <div class="chart-placeholder">📈</div>
+          <div class="chart-placeholder">🏠</div>
+          <div class="chart-placeholder">📊</div>
+          <div class="chart-placeholder">🔮</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-number">01</div>
+        <span class="project-tag">R · ggplot2 · Shiny · Forecasting</span>
+        <h3 class="project-title">UK House Price Analysis & Interactive Explorer</h3>
+        <p class="project-desc">A complete end-to-end analysis of 57 years of UK government house price data, uncovering regional trends, affordability gaps, and forecasting prices to 2027 using linear regression. Deployed as a live interactive Shiny web application.</p>
+        <div class="findings">
+          <h5>Key Findings</h5>
+          <div class="finding">The North West outgrew London over 25 years at 330% vs 306%</div>
+          <div class="finding">North East homes cost nearly 4x less than London in 2025</div>
+          <div class="finding">UK average predicted to hit £275,954 by December 2027</div>
+          <div class="finding">Post-COVID spike was the largest price surge in modern history</div>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-tag">R</span>
+          <span class="tech-tag">tidyverse</span>
+          <span class="tech-tag">ggplot2</span>
+          <span class="tech-tag">Shiny</span>
+          <span class="tech-tag">lm()</span>
+          <span class="tech-tag">GOV.UK Data</span>
+        </div>
+        <div class="project-links">
+          <a href="https://rebeccadata.shinyapps.io/uk-house-price-explorer/" target="_blank" class="project-link primary">🚀 Live App</a>
+          <a href="https://www.gov.uk/government/statistical-data-sets/uk-house-price-index-data-downloads-november-2024" target="_blank" class="project-link secondary">📁 Data Source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card reverse fade-in">
+      <div class="project-visual">
+        <div class="project-chart-grid">
+          <div class="chart-placeholder">🌸</div>
+          <div class="chart-placeholder">💊</div>
+          <div class="chart-placeholder">📋</div>
+          <div class="chart-placeholder">📅</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-number">02</div>
+        <span class="project-tag">R · Machine Learning · Shiny · Health Tech</span>
+        <h3 class="project-title">PCOS Health Companion — Predict, Type & Manage</h3>
+        <p class="project-desc">A free women's health tool built on real patient data. Uses machine learning to predict PCOS likelihood, identify the user's PCOS subtype through K-means clustering, and generate a personalised management plan with nutrition, exercise, supplements, and a GP letter.</p>
+        <div class="findings">
+          <h5>What It Does</h5>
+          <div class="finding">90% accurate Random Forest model trained on 541 patients</div>
+          <div class="finding">Identifies 4 PCOS subtypes using unsupervised clustering</div>
+          <div class="finding">Generates personalised management plans per subtype</div>
+          <div class="finding">Auto-generates a GP letter with personalised test requests</div>
+          <div class="finding">Built-in period tracker with cycle irregularity detection</div>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-tag">R</span>
+          <span class="tech-tag">randomForest</span>
+          <span class="tech-tag">K-means</span>
+          <span class="tech-tag">Shiny</span>
+          <span class="tech-tag">caret</span>
+          <span class="tech-tag">Kaggle Data</span>
+        </div>
+        <div class="project-links">
+          <a href="https://rebeccadata.shinyapps.io/pcos-health-companion/" target="_blank" class="project-link primary">🌸 Live App</a>
+          <a href="https://www.kaggle.com/datasets/prasoonkottarathil/polycystic-ovary-syndrome-pcos" target="_blank" class="project-link secondary">📁 Data Source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card fade-in">
+      <div class="project-visual">
+        <div class="project-chart-grid">
+          <div class="chart-placeholder">🏥</div>
+          <div class="chart-placeholder">🤖</div>
+          <div class="chart-placeholder">📉</div>
+          <div class="chart-placeholder">🔍</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <div class="project-number">03</div>
+        <span class="project-tag">Python · Machine Learning · SHAP · Healthcare</span>
+        <h3 class="project-title">Diabetes Readmission Risk Predictor</h3>
+        <p class="project-desc">MSc distinction-level research project predicting 30-day hospital readmission risk among diabetic patients using structured EHR data from 100,000+ patient records across 130 US hospitals. Deployed as a live interactive web application with SHAP explainability.</p>
+        <div class="findings">
+          <h5>Key Results</h5>
+          <div class="finding">XGBoost achieved best balance — 71% accuracy, 0.50 recall, AUC 0.64</div>
+          <div class="finding">5 models compared — XGBoost, CatBoost, Random Forest, DNN, Decision Tree</div>
+          <div class="finding">SHAP analysis identified discharge disposition and diagnosis count as top predictors</div>
+          <div class="finding">Deployed live on Hugging Face with real-time SHAP explanations per patient</div>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">XGBoost</span>
+          <span class="tech-tag">CatBoost</span>
+          <span class="tech-tag">SHAP</span>
+          <span class="tech-tag">Gradio</span>
+          <span class="tech-tag">UCI Data</span>
+        </div>
+        <div class="project-links">
+          <a href="https://huggingface.co/spaces/Becca8991/diabetes-readmission-predictor" target="_blank" class="project-link primary">🏥 Live App</a>
+          <a href="https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008" target="_blank" class="project-link secondary">📁 Data Source</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer>
+  <p>Designed & Built by <span>Rebecca Agbolade</span> · Strategic Data Analyst · 2026</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold:0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

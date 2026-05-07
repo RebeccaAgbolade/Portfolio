@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Rebecca Agbolade</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.contact-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-top:60px; }
+.contact-left p { font-size:16px; line-height:1.9; color:var(--text-muted); margin-bottom:20px; }
+.contact-left p span { color:var(--champagne); font-weight:500; }
+.contact-email-link { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,3vw,34px); color:var(--white); text-decoration:none; display:block; margin:32px 0; letter-spacing:1px; transition:color 0.3s; border-bottom:1px solid var(--border); padding-bottom:32px; }
+.contact-email-link:hover { color:var(--champagne); }
+.social-grid { display:flex; flex-direction:column; gap:12px; }
+.social-card { display:flex; align-items:center; gap:16px; padding:18px 20px; background:var(--forest-card); border:1px solid var(--border); text-decoration:none; transition:all 0.3s; }
+.social-card:hover { border-color:rgba(232,213,163,0.35); transform:translateX(4px); }
+.social-icon { width:40px; height:40px; background:rgba(232,213,163,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.social-icon svg { width:18px; height:18px; fill:var(--champagne); }
+.social-info h4 { font-size:14px; color:var(--white); font-weight:600; margin-bottom:2px; }
+.social-info p { font-size:12px; color:var(--text-muted); }
+.social-arrow { margin-left:auto; color:var(--champagne); opacity:0; font-size:16px; transition:opacity 0.3s; }
+.social-card:hover .social-arrow { opacity:1; }
+
+.contact-right { background:var(--forest-card); border:1px solid var(--border); padding:40px; }
+.contact-right h3 { font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--white); margin-bottom:8px; }
+.contact-right p { font-size:14px; color:var(--text-muted); margin-bottom:32px; line-height:1.7; }
+.form-group { margin-bottom:20px; }
+.form-group label { display:block; font-size:12px; color:var(--champagne); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+.form-group input, .form-group textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--border); color:var(--white); padding:12px 16px; font-family:'DM Sans',sans-serif; font-size:14px; transition:border-color 0.3s; outline:none; }
+.form-group input:focus, .form-group textarea:focus { border-color:rgba(232,213,163,0.4); }
+.form-group textarea { height:120px; resize:none; }
+.form-submit { width:100%; padding:14px; background:var(--champagne); color:var(--forest); font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; letter-spacing:1px; text-transform:uppercase; border:none; cursor:pointer; transition:all 0.3s; }
+.form-submit:hover { background:var(--champagne-light); }
+
+.availability { margin-top:60px; background:var(--forest-mid); border:1px solid var(--border); padding:32px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; }
+.avail-item h4 { font-size:13px; color:var(--champagne); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+.avail-item p { font-size:14px; color:var(--text-muted); line-height:1.6; }
+
+@media(max-width:900px){
+  .contact-wrapper { grid-template-columns:1fr; gap:40px; }
+  .availability { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">RA</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-content">
+<section>
+  <p class="section-label fade-in">Get In Touch</p>
+  <h2 class="section-title fade-in">Let's Connect</h2>
+
+  <div class="contact-wrapper">
+    <div class="contact-left fade-in">
+      <p>
+        Whether you want to <span>collaborate on a project</span>, discuss data analytics,
+        talk about opportunities, or just say hello — my inbox is always open.
+      </p>
+      <p>
+        I am particularly interested in conversations around <span>health data</span>,
+        <span>government analytics</span>, and anything that uses data to make
+        a real difference to people's lives.
+      </p>
+
+      <a href="mailto:agboladerebecca1@gmail.com" class="contact-email-link">
+        agboladerebecca1@gmail.com
+      </a>
+
+      <div class="social-grid">
+        <a href="https://www.linkedin.com/in/rebecca-agbolade/" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="social-info">
+            <h4>LinkedIn</h4>
+            <p>rebecca-agbolade</p>
+          </div>
+          <span class="social-arrow">→</span>
+        </a>
+        <a href="https://github.com/RebeccaAgbolade" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div class="social-info">
+            <h4>GitHub</h4>
+            <p>Rebecca-agbolade</p>
+          </div>
+          <span class="social-arrow">→</span>
+        </a>
+        <a href="https://rebeccadata.shinyapps.io/uk-house-price-explorer/" target="_blank" class="social-card">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="social-info">
+            <h4>Shiny Apps</h4>
+            <p>rebeccadata.shinyapps.io</p>
+          </div>
+          <span class="social-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-right fade-in">
+      <h3>Send a Message</h3>
+      <p>Fill in the form below and I will get back to you as soon as possible.</p>
+      <form action="mailto:agboladerebecca1@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Jane Smith" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="jane@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="Collaboration / Opportunity / Just saying hi" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell me what you have in mind..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="availability fade-in">
+    <div class="avail-item">
+      <h4>Location</h4>
+      <p>Teesside, North East England · Working remotely</p>
+    </div>
+    <div class="avail-item">
+      <h4>Current Role</h4>
+      <p>Strategic Data Analyst at Rural Payments Agency (RPA)</p>
+    </div>
+    <div class="avail-item">
+      <h4>Open To</h4>
+      <p>Collaborations, freelance projects, and data conversations</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <p>Designed & Built by <span>Rebecca Agbolade</span> · Strategic Data Analyst · 2026</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold:0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
